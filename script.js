@@ -381,4 +381,100 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add ripple class to all buttons
     document.querySelectorAll('.btn').forEach(btn => btn.classList.add('ripple'));
+
+    // Pricing toggle (monthly/yearly)
+    initPricingToggle();
+
+    // Subscribe modal
+    initSubscribeModal();
 });
+
+// ===== Pricing Toggle =====
+function initPricingToggle() {
+    const toggle = document.getElementById('pricingToggle');
+    const monthlyLabel = document.getElementById('monthlyLabel');
+    const yearlyLabel = document.getElementById('yearlyLabel');
+    if (!toggle) return;
+
+    toggle.addEventListener('click', () => {
+        const isYearly = toggle.classList.toggle('yearly');
+        monthlyLabel.classList.toggle('active', !isYearly);
+        yearlyLabel.classList.toggle('active', isYearly);
+
+        document.querySelectorAll('.price-amount[data-monthly]').forEach(el => {
+            const monthly = el.dataset.monthly;
+            const yearly = el.dataset.yearly;
+            if (monthly === '0') return;
+            el.textContent = isYearly ? yearly : monthly;
+        });
+
+        document.querySelectorAll('.price-period').forEach(el => {
+            if (el.closest('[data-plan="free"]')) return;
+            el.textContent = isYearly ? '/ سنوياً' : '/ شهرياً';
+        });
+    });
+}
+
+// ===== Subscribe Modal =====
+function openSubscribeModal(planName, planPrice) {
+    const modal = document.getElementById('subscribeModal');
+    document.getElementById('modalPlanName').textContent = planName;
+    document.getElementById('modalPlanPrice').textContent = planPrice;
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeSubscribeModal() {
+    const modal = document.getElementById('subscribeModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+    // Reset form after close animation
+    setTimeout(() => {
+        const form = document.getElementById('subscribeForm');
+        if (form) {
+            form.reset();
+            form.style.display = '';
+        }
+        const success = document.querySelector('.modal-success');
+        if (success) success.remove();
+        document.querySelector('.modal-icon').style.display = '';
+        document.querySelector('.modal-title').style.display = '';
+        document.querySelector('.modal-price').style.display = '';
+        document.querySelector('.modal-note').style.display = '';
+    }, 300);
+}
+
+function initSubscribeModal() {
+    const modal = document.getElementById('subscribeModal');
+    const closeBtn = document.getElementById('modalClose');
+    const form = document.getElementById('subscribeForm');
+    if (!modal) return;
+
+    closeBtn.addEventListener('click', closeSubscribeModal);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeSubscribeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeSubscribeModal();
+    });
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Hide form elements
+        form.style.display = 'none';
+        document.querySelector('.modal-icon').style.display = 'none';
+        document.querySelector('.modal-title').style.display = 'none';
+        document.querySelector('.modal-price').style.display = 'none';
+        document.querySelector('.modal-note').style.display = 'none';
+
+        // Show success message
+        const successDiv = document.createElement('div');
+        successDiv.className = 'modal-success';
+        successDiv.innerHTML = `
+            <div class="success-icon"><i class="fas fa-check"></i></div>
+            <h3>تم تسجيل طلبك بنجاح!</h3>
+            <p>شكراً لاهتمامك! سنتواصل معك قريباً عبر البريد الإلكتروني لإتمام عملية الاشتراك والتفعيل.</p>
+        `;
+        modal.querySelector('.modal-content').appendChild(successDiv);
+    });
+}
