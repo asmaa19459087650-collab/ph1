@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل الأدوية والعلاجات</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="تبديل المظهر">
+        <i class="fas fa-sun icon-sun"></i>
+        <i class="fas fa-moon icon-moon"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <i class="fas fa-capsules"></i>
+                <span>دليل الأدوية</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="القائمة">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">الرئيسية</a></li>
+                <li><a href="#about" class="nav-link">تعريف الأدوية</a></li>
+                <li><a href="#types" class="nav-link">أنواع الأدوية</a></li>
+                <li><a href="#uses" class="nav-link">الاستخدامات</a></li>
+                <li><a href="#benefits" class="nav-link">الإيجابيات</a></li>
+                <li><a href="#risks" class="nav-link">السلبيات</a></li>
+                <li><a href="#side-effects" class="nav-link">الآثار الجانبية</a></li>
+                <li><a href="#guidelines" class="nav-link">إرشادات الاستخدام</a></li>
+                <li><a href="#compare" class="nav-link">مقارنة الأدوية</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Progress Bar -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Section 1: Home -->
+    <section id="home" class="hero-section">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-content">
+            <div class="hero-badge animate-on-scroll">
+                <i class="fas fa-shield-virus"></i>
+                <span>دليلك الصحي الموثوق</span>
+            </div>
+            <h1 class="hero-title animate-on-scroll">
+                دليل <span class="gradient-text">الأدوية</span> والعلاجات
+            </h1>
+            <p class="hero-subtitle animate-on-scroll">
+                مرجعك الشامل لفهم الأدوية المتوفرة في الصيدليات، استخداماتها، فوائدها، وآثارها الجانبية بأسلوب مبسط وواضح
+            </p>
+            <div class="hero-stats animate-on-scroll">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="500">0</div>
+                    <div class="stat-label">دواء مسجل</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">فئة علاجية</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="1000">0</div>
+                    <div class="stat-label">معلومة طبية</div>
+                </div>
+            </div>
+            <div class="hero-actions animate-on-scroll">
+                <a href="#about" class="btn btn-primary">
+                    <span>ابدأ الاستكشاف</span>
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <a href="#types" class="btn btn-outline">
+                    <span>تصفح الأدوية</span>
+                    <i class="fas fa-pills"></i>
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>اسحب للأسفل</span>
+        </div>
+    </section>
+
+    <!-- Section 2: About Medicines -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-book-medical"></i> تعريف</span>
+                <h2 class="section-title">ما هي <span class="gradient-text">الأدوية</span>؟</h2>
+                <p class="section-desc">فهم أساسيات الأدوية وكيف تعمل في جسم الإنسان</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card glass-card animate-on-scroll">
+                    <div class="about-icon"><i class="fas fa-flask"></i></div>
+                    <h3>التركيب الكيميائي</h3>
+                    <p>الأدوية هي مواد كيميائية مصممة للتفاعل مع أنظمة الجسم البيولوجية لعلاج الأمراض أو تخفيف الأعراض</p>
+                </div>
+                <div class="about-card glass-card animate-on-scroll">
+                    <div class="about-icon"><i class="fas fa-microscope"></i></div>
+                    <h3>آلية العمل</h3>
+                    <p>تعمل الأدوية عن طريق التأثير على مستقبلات خلوية محددة أو تثبيط إنزيمات معينة أو تعديل العمليات الحيوية في الجسم</p>
+                </div>
+                <div class="about-card glass-card animate-on-scroll">
+                    <div class="about-icon"><i class="fas fa-prescription-bottle-medical"></i></div>
+                    <h3>أشكال الجرعات</h3>
+                    <p>تتوفر الأدوية بأشكال متعددة: أقراص، كبسولات، شراب، حقن، مراهم، قطرات، وبخاخات حسب الحاجة العلاجية</p>
+                </div>
+                <div class="about-card glass-card animate-on-scroll">
+                    <div class="about-icon"><i class="fas fa-user-doctor"></i></div>
+                    <h3>الوصفة الطبية</h3>
+                    <p>بعض الأدوية تتطلب وصفة طبية من الطبيب المختص، بينما أدوية أخرى يمكن صرفها مباشرة من الصيدلية</p>
+                </div>
+            </div>
+            <div class="about-info-box animate-on-scroll">
+                <div class="info-icon"><i class="fas fa-info-circle"></i></div>
+                <div class="info-content">
+                    <h4>هل تعلم؟</h4>
+                    <p>تمر الأدوية بمراحل طويلة من البحث والتطوير والتجارب السريرية قبل أن تصل إلى رفوف الصيدليات، وقد تستغرق هذه العملية من 10 إلى 15 سنة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Types of Medicines - EXPANDED with ~100 medicines -->
+    <section id="types" class="section section-alt">
+        <div class="container-wide">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-pills"></i> التصنيف</span>
+                <h2 class="section-title">أنواع <span class="gradient-text">الأدوية</span></h2>
+                <p class="section-desc">تعرف على التصنيفات الرئيسية للأدوية المتوفرة في الصيدليات - أكثر من 100 دواء</p>
+            </div>
+            <div class="types-grid">
+
+                <!-- 1. مسكنات الألم -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #3b82f6"><i class="fas fa-head-side-virus"></i></div>
+                    <h3>مسكنات الألم</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> باراسيتامول (بنادول، أدول، تايلينول)</li>
+                        <li><i class="fas fa-check-circle"></i> إيبوبروفين (بروفين، أدفيل، نيوروفين)</li>
+                        <li><i class="fas fa-check-circle"></i> الأسبرين (أسبوسيد، جوسبرين)</li>
+                        <li><i class="fas fa-check-circle"></i> ديكلوفيناك (فولتارين، كتافلام، أولفين)</li>
+                        <li><i class="fas fa-check-circle"></i> نابروكسين (نابروسين)</li>
+                        <li><i class="fas fa-check-circle"></i> ميلوكسيكام (موبيك)</li>
+                        <li><i class="fas fa-check-circle"></i> كيتوبروفين (كيتوفان)</li>
+                        <li><i class="fas fa-check-circle"></i> سيليكوكسيب (سيليبركس)</li>
+                    </ul>
+                    <div class="type-badge">الأكثر استخداماً</div>
+                </div>
+
+                <!-- 2. المضادات الحيوية -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #10b981"><i class="fas fa-virus-slash"></i></div>
+                    <h3>المضادات الحيوية</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> أموكسيسيلين (أوجمنتين، هايموكس)</li>
+                        <li><i class="fas fa-check-circle"></i> أزيثرومايسين (زيثروماكس، أزروليد)</li>
+                        <li><i class="fas fa-check-circle"></i> سيبروفلوكساسين (سيبرو، سيبروكسين)</li>
+                        <li><i class="fas fa-check-circle"></i> سيفالكسين (كيفلكس)</li>
+                        <li><i class="fas fa-check-circle"></i> كلاريثرومايسين (كلاسيد)</li>
+                        <li><i class="fas fa-check-circle"></i> ميترونيدازول (فلاجيل)</li>
+                        <li><i class="fas fa-check-circle"></i> دوكسيسايكلين (فيبراميسين)</li>
+                        <li><i class="fas fa-check-circle"></i> ليفوفلوكساسين (تافانيك)</li>
+                        <li><i class="fas fa-check-circle"></i> سيفيكسيم (سوبراكس)</li>
+                        <li><i class="fas fa-check-circle"></i> أموكسيسيلين + كلافيولانيك (ميجاموكس)</li>
+                    </ul>
+                    <div class="type-badge">تحتاج وصفة</div>
+                </div>
+
+                <!-- 3. مضادات الحساسية -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #f59e0b"><i class="fas fa-allergies"></i></div>
+                    <h3>مضادات الحساسية</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> لوراتادين (كلاريتين)</li>
+                        <li><i class="fas fa-check-circle"></i> سيتيريزين (زيرتك)</li>
+                        <li><i class="fas fa-check-circle"></i> فيكسوفينادين (تلفاست)</li>
+                        <li><i class="fas fa-check-circle"></i> ديفينهيدرامين (بينادريل)</li>
+                        <li><i class="fas fa-check-circle"></i> ديسلوراتادين (إيريوس، ديسلور)</li>
+                        <li><i class="fas fa-check-circle"></i> كلورفينيرامين (هيستوب)</li>
+                        <li><i class="fas fa-check-circle"></i> ليفوسيتيريزين (زيزال)</li>
+                        <li><i class="fas fa-check-circle"></i> مونتيلوكاست (سينجولير)</li>
+                    </ul>
+                    <div class="type-badge">بدون وصفة</div>
+                </div>
+
+                <!-- 4. أدوية القلب والضغط -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #ef4444"><i class="fas fa-heart-pulse"></i></div>
+                    <h3>أدوية القلب والضغط</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> أملوديبين (نورفاسك)</li>
+                        <li><i class="fas fa-check-circle"></i> أتينولول (تينورمين)</li>
+                        <li><i class="fas fa-check-circle"></i> إنالابريل (رينيتك)</li>
+                        <li><i class="fas fa-check-circle"></i> لوسارتان (كوزار)</li>
+                        <li><i class="fas fa-check-circle"></i> فالسارتان (ديوفان، تاريج)</li>
+                        <li><i class="fas fa-check-circle"></i> بيسوبرولول (كونكور)</li>
+                        <li><i class="fas fa-check-circle"></i> كابتوبريل (كابوتن)</li>
+                        <li><i class="fas fa-check-circle"></i> نيفيديبين (أدالات)</li>
+                        <li><i class="fas fa-check-circle"></i> هيدروكلوروثيازيد (هيدروزيد)</li>
+                        <li><i class="fas fa-check-circle"></i> كلوبيدوجريل (بلافيكس)</li>
+                    </ul>
+                    <div class="type-badge">مزمنة</div>
+                </div>
+
+                <!-- 5. أدوية المعدة والجهاز الهضمي -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #8b5cf6"><i class="fas fa-stomach"></i></div>
+                    <h3>أدوية المعدة والجهاز الهضمي</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> أوميبرازول (لوسك، بريلوسيك)</li>
+                        <li><i class="fas fa-check-circle"></i> رانيتيدين (زانتاك)</li>
+                        <li><i class="fas fa-check-circle"></i> مالوكس (مضاد حموضة)</li>
+                        <li><i class="fas fa-check-circle"></i> دومبيريدون (موتيليوم)</li>
+                        <li><i class="fas fa-check-circle"></i> لانسوبرازول (لانزور)</li>
+                        <li><i class="fas fa-check-circle"></i> إيزوميبرازول (نيكسيوم)</li>
+                        <li><i class="fas fa-check-circle"></i> ميبيفيرين (دوسباتالين، كولوفيرين)</li>
+                        <li><i class="fas fa-check-circle"></i> لوبيراميد (إيموديوم)</li>
+                        <li><i class="fas fa-check-circle"></i> بانتوبرازول (بانتولوك، كونترولوك)</li>
+                        <li><i class="fas fa-check-circle"></i> ميتوكلوبراميد (بريمبران)</li>
+                    </ul>
+                    <div class="type-badge">شائعة</div>
+                </div>
+
+                <!-- 6. أدوية الجهاز التنفسي -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #06b6d4"><i class="fas fa-lungs"></i></div>
+                    <h3>أدوية الجهاز التنفسي</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> سالبوتامول (فنتولين)</li>
+                        <li><i class="fas fa-check-circle"></i> بيكلوميثازون (بيكوتايد)</li>
+                        <li><i class="fas fa-check-circle"></i> أسيتيل سيستين (فلوميوسيل، ميوكوسول)</li>
+                        <li><i class="fas fa-check-circle"></i> ديكستروميثورفان (مهدئ للسعال)</li>
+                        <li><i class="fas fa-check-circle"></i> بوديزونيد (بلميكورت)</li>
+                        <li><i class="fas fa-check-circle"></i> فلوتيكازون (فليكسوتايد)</li>
+                        <li><i class="fas fa-check-circle"></i> أمبروكسول (ميوكوسولفان)</li>
+                        <li><i class="fas fa-check-circle"></i> مونتيلوكاست (سينجولير) - للربو</li>
+                        <li><i class="fas fa-check-circle"></i> تيوتروبيوم (سبيريفا)</li>
+                    </ul>
+                    <div class="type-badge">تنفسية</div>
+                </div>
+
+                <!-- 7. أدوية الجهاز العصبي والنفسية -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #ec4899"><i class="fas fa-brain"></i></div>
+                    <h3>أدوية الجهاز العصبي والنفسية</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> سيرترالين (زولوفت، لوسترال)</li>
+                        <li><i class="fas fa-check-circle"></i> فلوكسيتين (بروزاك)</li>
+                        <li><i class="fas fa-check-circle"></i> ديازيبام (فاليوم)</li>
+                        <li><i class="fas fa-check-circle"></i> كاربامازبين (تجريتول)</li>
+                        <li><i class="fas fa-check-circle"></i> باروكسيتين (باكسيل، سيروكسات)</li>
+                        <li><i class="fas fa-check-circle"></i> إسيتالوبرام (ليكسابرو، سيبرالكس)</li>
+                        <li><i class="fas fa-check-circle"></i> ألبرازولام (زاناكس)</li>
+                        <li><i class="fas fa-check-circle"></i> أميتريبتيلين (تريبتيزول)</li>
+                        <li><i class="fas fa-check-circle"></i> جابابنتين (نيورونتين)</li>
+                        <li><i class="fas fa-check-circle"></i> بريجابالين (ليريكا)</li>
+                    </ul>
+                    <div class="type-badge">متخصصة</div>
+                </div>
+
+                <!-- 8. أدوية السكري -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #14b8a6"><i class="fas fa-droplet"></i></div>
+                    <h3>أدوية السكري</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> ميتفورمين (جلوكوفاج، سيدوفاج)</li>
+                        <li><i class="fas fa-check-circle"></i> جليبنكلاميد (داونيل، أوجلوكون)</li>
+                        <li><i class="fas fa-check-circle"></i> الأنسولين (لانتوس، نوفورابيد، هيوميولين)</li>
+                        <li><i class="fas fa-check-circle"></i> سيتاجليبتين (جانوفيا)</li>
+                        <li><i class="fas fa-check-circle"></i> جليمبرايد (أماريل)</li>
+                        <li><i class="fas fa-check-circle"></i> فيلداجليبتين (جالفوس)</li>
+                        <li><i class="fas fa-check-circle"></i> إمباجليفلوزين (جارديانس)</li>
+                        <li><i class="fas fa-check-circle"></i> داباجليفلوزين (فوركسيجا)</li>
+                    </ul>
+                    <div class="type-badge">مزمنة</div>
+                </div>
+
+                <!-- 9. أدوية الكولسترول والدهون -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #f97316"><i class="fas fa-vial"></i></div>
+                    <h3>أدوية الكولسترول والدهون</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> أتورفاستاتين (ليبيتور)</li>
+                        <li><i class="fas fa-check-circle"></i> روزوفاستاتين (كريستور)</li>
+                        <li><i class="fas fa-check-circle"></i> سيمفاستاتين (زوكور)</li>
+                        <li><i class="fas fa-check-circle"></i> فينوفايبرات (ليبانتيل)</li>
+                        <li><i class="fas fa-check-circle"></i> إيزيتيميب (إيزيتيمايب، زيتيا)</li>
+                        <li><i class="fas fa-check-circle"></i> أوميغا 3 (مكمل غذائي)</li>
+                    </ul>
+                    <div class="type-badge">وقائية</div>
+                </div>
+
+                <!-- 10. الفيتامينات والمكملات -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #eab308"><i class="fas fa-seedling"></i></div>
+                    <h3>الفيتامينات والمكملات</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> فيتامين D3 (فيدروب، أوسوفورتين)</li>
+                        <li><i class="fas fa-check-circle"></i> فيتامين C (سي ريتارد، ريدوكسون)</li>
+                        <li><i class="fas fa-check-circle"></i> فيتامين B12 (ديبوفيت حقن)</li>
+                        <li><i class="fas fa-check-circle"></i> حمض الفوليك (فوليك أسيد)</li>
+                        <li><i class="fas fa-check-circle"></i> فيتامين B المركب (نيوروبيون)</li>
+                        <li><i class="fas fa-check-circle"></i> الحديد (فيروجلوبين، فيروسيل)</li>
+                        <li><i class="fas fa-check-circle"></i> الكالسيوم (كالسيترون، كال ماج زنك)</li>
+                        <li><i class="fas fa-check-circle"></i> الزنك (زنكترون، أوكتاترون)</li>
+                    </ul>
+                    <div class="type-badge">مكملات</div>
+                </div>
+
+                <!-- 11. أدوية العين والأذن -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #0ea5e9"><i class="fas fa-eye"></i></div>
+                    <h3>أدوية العين والأذن</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> توبراميسين (توبركس) قطرة عين</li>
+                        <li><i class="fas fa-check-circle"></i> سيبروفلوكساسين (سيلوكسان) قطرة</li>
+                        <li><i class="fas fa-check-circle"></i> دموع صناعية (سيستان، تيرز ناتورال)</li>
+                        <li><i class="fas fa-check-circle"></i> بريدنيزولون (بريد فورت) قطرة</li>
+                        <li><i class="fas fa-check-circle"></i> أوفلوكساسين (أوفلوكس) قطرة أذن</li>
+                        <li><i class="fas fa-check-circle"></i> تيمولول (تيموبتيك) للجلوكوما</li>
+                    </ul>
+                    <div class="type-badge">موضعية</div>
+                </div>
+
+                <!-- 12. أدوية الجلد -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #d946ef"><i class="fas fa-hand-dots"></i></div>
+                    <h3>أدوية الجلد والتجميل</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> فيوسيدين (كريم مضاد بكتيري)</li>
+                        <li><i class="fas fa-check-circle"></i> بيتاميثازون (بيتاديرم، ديبروساليك)</li>
+                        <li><i class="fas fa-check-circle"></i> كلوتريمازول (كانستين) مضاد فطري</li>
+                        <li><i class="fas fa-check-circle"></i> موميتازون (إيلوكون)</li>
+                        <li><i class="fas fa-check-circle"></i> أداپالين (ديفرين) لحب الشباب</li>
+                        <li><i class="fas fa-check-circle"></i> كيتوكونازول (نيزورال) شامبو</li>
+                        <li><i class="fas fa-check-circle"></i> هيدروكورتيزون كريم</li>
+                        <li><i class="fas fa-check-circle"></i> تريتينوين (ريتين أ)</li>
+                    </ul>
+                    <div class="type-badge">موضعية</div>
+                </div>
+
+                <!-- 13. أدوية العظام والمفاصل -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #a3e635"><i class="fas fa-bone"></i></div>
+                    <h3>أدوية العظام والمفاصل</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> أليندرونات (فوساماكس) لهشاشة العظام</li>
+                        <li><i class="fas fa-check-circle"></i> جلوكوزامين (جوينت إيس)</li>
+                        <li><i class="fas fa-check-circle"></i> كولشيسين (كولشيسين) للنقرس</li>
+                        <li><i class="fas fa-check-circle"></i> ألوبيورينول (زيلوريك) للنقرس</li>
+                        <li><i class="fas fa-check-circle"></i> باسط عضلات (ميوفين، ريلاكسون)</li>
+                        <li><i class="fas fa-check-circle"></i> كالسيتونين (مياكالسيك)</li>
+                    </ul>
+                    <div class="type-badge">مفاصل</div>
+                </div>
+
+                <!-- 14. أدوية الغدة الدرقية -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #7c3aed"><i class="fas fa-shield-halved"></i></div>
+                    <h3>أدوية الغدة الدرقية</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> ليفوثيروكسين (إلتروكسين، يوثيروكس)</li>
+                        <li><i class="fas fa-check-circle"></i> كاربيمازول (نيوميركازول)</li>
+                        <li><i class="fas fa-check-circle"></i> بروبيل ثيوراسيل (PTU)</li>
+                        <li><i class="fas fa-check-circle"></i> ميثيمازول (تابازول)</li>
+                    </ul>
+                    <div class="type-badge">هرمونية</div>
+                </div>
+
+                <!-- 15. مضادات الفطريات -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #22d3ee"><i class="fas fa-shield-virus"></i></div>
+                    <h3>مضادات الفطريات</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> فلوكونازول (ديفلوكان)</li>
+                        <li><i class="fas fa-check-circle"></i> إيتراكونازول (سبورانوكس)</li>
+                        <li><i class="fas fa-check-circle"></i> تيربينافين (لاميزيل)</li>
+                        <li><i class="fas fa-check-circle"></i> نيستاتين (ميكوستاتين)</li>
+                        <li><i class="fas fa-check-circle"></i> كلوتريمازول مهبلي (جينو كانستين)</li>
+                    </ul>
+                    <div class="type-badge">فطرية</div>
+                </div>
+
+                <!-- 16. أدوية المسالك البولية -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #fb923c"><i class="fas fa-droplet"></i></div>
+                    <h3>أدوية المسالك البولية</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> تامسولوسين (أومنيك) للبروستاتا</li>
+                        <li><i class="fas fa-check-circle"></i> فيناسترايد (بروسكار)</li>
+                        <li><i class="fas fa-check-circle"></i> نيتروفورانتوين (يوفامين ريتارد)</li>
+                        <li><i class="fas fa-check-circle"></i> فوسفوميسين (مونيوريل)</li>
+                        <li><i class="fas fa-check-circle"></i> أوكسيبيوتينين (ديتروبان)</li>
+                        <li><i class="fas fa-check-circle"></i> سيلدينافيل (فياجرا)</li>
+                    </ul>
+                    <div class="type-badge">بولية</div>
+                </div>
+
+                <!-- 17. مضادات الفيروسات -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #f43f5e"><i class="fas fa-virus"></i></div>
+                    <h3>مضادات الفيروسات</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> أوسيلتاميفير (تاميفلو) للإنفلونزا</li>
+                        <li><i class="fas fa-check-circle"></i> أسيكلوفير (زوفيراكس) للهربس</li>
+                        <li><i class="fas fa-check-circle"></i> فالاسيكلوفير (فالتريكس)</li>
+                        <li><i class="fas fa-check-circle"></i> ريمديسيفير (فيكلوري)</li>
+                        <li><i class="fas fa-check-circle"></i> سوفوسبوفير (سوفالدي) لالتهاب الكبد C</li>
+                        <li><i class="fas fa-check-circle"></i> إنتيكافير (باراكلود) لالتهاب الكبد B</li>
+                    </ul>
+                    <div class="type-badge">فيروسية</div>
+                </div>
+
+                <!-- 18. أدوية الصرع والتشنجات -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #a855f7"><i class="fas fa-bolt"></i></div>
+                    <h3>أدوية الصرع والتشنجات</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> كاربامازبين (تجريتول)</li>
+                        <li><i class="fas fa-check-circle"></i> فالبروات الصوديوم (ديباكين)</li>
+                        <li><i class="fas fa-check-circle"></i> لاموتريجين (لاميكتال)</li>
+                        <li><i class="fas fa-check-circle"></i> ليفيتيراسيتام (كيبرا)</li>
+                        <li><i class="fas fa-check-circle"></i> فينيتوين (إبانوتين)</li>
+                        <li><i class="fas fa-check-circle"></i> توبيراميت (توباماكس)</li>
+                        <li><i class="fas fa-check-circle"></i> كلونازيبام (ريفوتريل)</li>
+                    </ul>
+                    <div class="type-badge">عصبية</div>
+                </div>
+
+                <!-- 19. أدوية الكورتيزون والمناعة -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #e11d48"><i class="fas fa-shield"></i></div>
+                    <h3>الكورتيزون ومثبطات المناعة</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> بريدنيزولون (هوستاكورتين)</li>
+                        <li><i class="fas fa-check-circle"></i> ديكساميثازون (ديكادرون)</li>
+                        <li><i class="fas fa-check-circle"></i> هيدروكورتيزون (سولوكورتيف)</li>
+                        <li><i class="fas fa-check-circle"></i> ميثيل بريدنيزولون (سولوميدرول)</li>
+                        <li><i class="fas fa-check-circle"></i> أزاثيوبرين (إيموران)</li>
+                        <li><i class="fas fa-check-circle"></i> ميثوتريكسيت (للروماتويد)</li>
+                    </ul>
+                    <div class="type-badge">مناعية</div>
+                </div>
+
+                <!-- 20. أدوية السعال والبرد -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #0891b2"><i class="fas fa-head-side-cough"></i></div>
+                    <h3>أدوية السعال والبرد</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> ديكستروميثورفان (توسيفان) مهدئ سعال</li>
+                        <li><i class="fas fa-check-circle"></i> جوافينيسين (ميوكوفللين) طارد بلغم</li>
+                        <li><i class="fas fa-check-circle"></i> سودوإفيدرين (سودافيد) مزيل احتقان</li>
+                        <li><i class="fas fa-check-circle"></i> أوكسوميمازين (توبليكسيل)</li>
+                        <li><i class="fas fa-check-circle"></i> كوديين (كودولار) مثبط سعال قوي</li>
+                        <li><i class="fas fa-check-circle"></i> أسيتيل سيستين (ACC) مذيب بلغم</li>
+                        <li><i class="fas fa-check-circle"></i> فينيل إفرين (أوتريفين) بخاخ أنف</li>
+                    </ul>
+                    <div class="type-badge">نزلات</div>
+                </div>
+
+                <!-- 21. أدوية مضادات التخثر وسيولة الدم -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #dc2626"><i class="fas fa-droplet"></i></div>
+                    <h3>مضادات التخثر وسيولة الدم</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> وارفارين (كومادين، ماريفان)</li>
+                        <li><i class="fas fa-check-circle"></i> كلوبيدوجريل (بلافيكس)</li>
+                        <li><i class="fas fa-check-circle"></i> ريفاروكسابان (زاريلتو)</li>
+                        <li><i class="fas fa-check-circle"></i> أبيكسابان (إليكويس)</li>
+                        <li><i class="fas fa-check-circle"></i> إينوكسابارين (كليكسان) حقن</li>
+                        <li><i class="fas fa-check-circle"></i> هيبارين (حقن مميع للدم)</li>
+                        <li><i class="fas fa-check-circle"></i> أسبوسيد (أسبرين مخفف 75-100 مجم)</li>
+                    </ul>
+                    <div class="type-badge">سيولة</div>
+                </div>
+
+                <!-- 22. أدوية الأنيميا وفقر الدم -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #e879f9"><i class="fas fa-syringe"></i></div>
+                    <h3>أدوية الأنيميا وفقر الدم</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> فيروس فيومارات (فيروجلوبين)</li>
+                        <li><i class="fas fa-check-circle"></i> فيروز سلفات (فيروسيل، فيفول)</li>
+                        <li><i class="fas fa-check-circle"></i> حقن حديد (فيروساك، كوزموفير)</li>
+                        <li><i class="fas fa-check-circle"></i> إريثروبويتين (إيبوجين) حقن</li>
+                        <li><i class="fas fa-check-circle"></i> حمض الفوليك (5 مجم)</li>
+                        <li><i class="fas fa-check-circle"></i> فيتامين B12 حقن (ديبوفيت)</li>
+                    </ul>
+                    <div class="type-badge">دم</div>
+                </div>
+
+                <!-- 23. أدوية الغثيان والقيء -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #84cc16"><i class="fas fa-face-dizzy"></i></div>
+                    <h3>أدوية الغثيان والقيء</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> أوندانسيترون (زوفران)</li>
+                        <li><i class="fas fa-check-circle"></i> ميتوكلوبراميد (بريمبران)</li>
+                        <li><i class="fas fa-check-circle"></i> دومبيريدون (موتيليوم)</li>
+                        <li><i class="fas fa-check-circle"></i> ديمينهيدرينات (درامامين) دوار السفر</li>
+                        <li><i class="fas fa-check-circle"></i> بروكلوربيرازين (ستيميتيل)</li>
+                        <li><i class="fas fa-check-circle"></i> جرانيسيترون (كيتريل)</li>
+                    </ul>
+                    <div class="type-badge">غثيان</div>
+                </div>
+
+                <!-- 24. أدوية الإمساك والملينات -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #059669"><i class="fas fa-leaf"></i></div>
+                    <h3>الملينات وأدوية الإمساك</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> لاكتيلوز (دوفالاك)</li>
+                        <li><i class="fas fa-check-circle"></i> بيساكوديل (دولكولاكس)</li>
+                        <li><i class="fas fa-check-circle"></i> سينا (سينالاكس)</li>
+                        <li><i class="fas fa-check-circle"></i> ماكروجول (فوريلاكس، موفيكول)</li>
+                        <li><i class="fas fa-check-circle"></i> جلسيرين تحاميل</li>
+                        <li><i class="fas fa-check-circle"></i> سيلليوم (ميتاميوسيل) ألياف</li>
+                    </ul>
+                    <div class="type-badge">هضمية</div>
+                </div>
+
+                <!-- 25. أدوية النقرس -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #c026d3"><i class="fas fa-hand"></i></div>
+                    <h3>أدوية النقرس</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> كولشيسين (كولشيسين)</li>
+                        <li><i class="fas fa-check-circle"></i> ألوبيورينول (زيلوريك)</li>
+                        <li><i class="fas fa-check-circle"></i> فيبوكسوستات (أداينوريك، يوريك)</li>
+                        <li><i class="fas fa-check-circle"></i> بنزبرومارون</li>
+                        <li><i class="fas fa-check-circle"></i> إندوميثاسين (إندوسيد) مضاد التهاب</li>
+                    </ul>
+                    <div class="type-badge">نقرس</div>
+                </div>
+
+                <!-- 26. أدوية الأرق واضطرابات النوم -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #6366f1"><i class="fas fa-moon"></i></div>
+                    <h3>أدوية الأرق والنوم</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> زولبيديم (أمبيان، ستيلنوكس)</li>
+                        <li><i class="fas fa-check-circle"></i> ميلاتونين (سيركادين)</li>
+                        <li><i class="fas fa-check-circle"></i> ترازودون (ديزيريل)</li>
+                        <li><i class="fas fa-check-circle"></i> دوكسيبين (سيلينور)</li>
+                        <li><i class="fas fa-check-circle"></i> إيزوبيكلون (لونيستا)</li>
+                        <li><i class="fas fa-check-circle"></i> ديفينهيدرامين (يوني سوم)</li>
+                    </ul>
+                    <div class="type-badge">نوم</div>
+                </div>
+
+                <!-- 27. أدوية الشقيقة (الصداع النصفي) -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #f97316"><i class="fas fa-head-side-virus"></i></div>
+                    <h3>أدوية الشقيقة (الصداع النصفي)</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> سوماتريبتان (إيميجران)</li>
+                        <li><i class="fas fa-check-circle"></i> ريزاتريبتان (ماكسالت)</li>
+                        <li><i class="fas fa-check-circle"></i> بروبرانولول (إندرال) وقائي</li>
+                        <li><i class="fas fa-check-circle"></i> توبيراميت (توباماكس) وقائي</li>
+                        <li><i class="fas fa-check-circle"></i> فالبروات (ديباكين) وقائي</li>
+                        <li><i class="fas fa-check-circle"></i> إرجوتامين + كافيين (كافرجوت)</li>
+                    </ul>
+                    <div class="type-badge">صداع</div>
+                </div>
+
+                <!-- 28. أدوية البواسير -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #0d9488"><i class="fas fa-medkit"></i></div>
+                    <h3>أدوية البواسير والأوردة</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> دافلون 500 (ديوسمين + هسبريدين)</li>
+                        <li><i class="fas fa-check-circle"></i> بروكتو جليفينول (تحاميل + كريم)</li>
+                        <li><i class="fas fa-check-circle"></i> فاكتو (تحاميل بواسير)</li>
+                        <li><i class="fas fa-check-circle"></i> شيرويد (كريم موضعي)</li>
+                        <li><i class="fas fa-check-circle"></i> ليدوكايين موضعي (مخدر)</li>
+                        <li><i class="fas fa-check-circle"></i> دوكسيوم (ملين للبراز)</li>
+                    </ul>
+                    <div class="type-badge">بواسير</div>
+                </div>
+
+                <!-- 29. مسكنات أعصاب ومرخيات عضلات -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #2563eb"><i class="fas fa-dumbbell"></i></div>
+                    <h3>مرخيات العضلات</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> كلورزوكسازون (ميوفين)</li>
+                        <li><i class="fas fa-check-circle"></i> تيزانيدين (سيردالود)</li>
+                        <li><i class="fas fa-check-circle"></i> باكلوفين (ليوريزال)</li>
+                        <li><i class="fas fa-check-circle"></i> ميثوكاربامول (روباكسين)</li>
+                        <li><i class="fas fa-check-circle"></i> أورفينادرين (نورفليكس)</li>
+                        <li><i class="fas fa-check-circle"></i> سيكلوبنزابرين (فليكسيريل)</li>
+                    </ul>
+                    <div class="type-badge">عضلات</div>
+                </div>
+
+                <!-- 30. أدوية الأسنان والفم -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #f472b6"><i class="fas fa-tooth"></i></div>
+                    <h3>أدوية الأسنان والفم</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> ميترونيدازول (فلاجيل) للثة</li>
+                        <li><i class="fas fa-check-circle"></i> كلوريكسيدين (هكسيتول) غسول فم</li>
+                        <li><i class="fas fa-check-circle"></i> ليدوكايين جل (فموي مخدر)</li>
+                        <li><i class="fas fa-check-circle"></i> ميكونازول جل فموي (داكتارين)</li>
+                        <li><i class="fas fa-check-circle"></i> بنزيدامين (تانتم فيرد) غسول</li>
+                        <li><i class="fas fa-check-circle"></i> أموكسيسيلين + ميترونيدازول (لخراج الأسنان)</li>
+                    </ul>
+                    <div class="type-badge">أسنان</div>
+                </div>
+
+                <!-- 31. أدوية الحمل والنساء -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #ec4899"><i class="fas fa-baby"></i></div>
+                    <h3>أدوية الحمل والنساء</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> حمض الفوليك (قبل وأثناء الحمل)</li>
+                        <li><i class="fas fa-check-circle"></i> بروجسترون (دوفاستون، يوتروجستان)</li>
+                        <li><i class="fas fa-check-circle"></i> حديد + فوليك (بريجناكير، فروز-ف)</li>
+                        <li><i class="fas fa-check-circle"></i> ميتفورمين (لتكيس المبايض)</li>
+                        <li><i class="fas fa-check-circle"></i> كلوميفين (كلوميد) منشط تبويض</li>
+                        <li><i class="fas fa-check-circle"></i> نيفيديبين (أدالات) لتقلصات الرحم</li>
+                        <li><i class="fas fa-check-circle"></i> حبوب منع الحمل (ياسمين، مارفيلون)</li>
+                    </ul>
+                    <div class="type-badge">نسائية</div>
+                </div>
+
+                <!-- 32. أدوية الأطفال الشائعة -->
+                <div class="type-card animate-on-scroll">
+                    <div class="type-icon" style="--accent: #38bdf8"><i class="fas fa-child"></i></div>
+                    <h3>أدوية الأطفال الشائعة</h3>
+                    <ul class="type-list">
+                        <li><i class="fas fa-check-circle"></i> باراسيتامول شراب (أدول، فيفادول)</li>
+                        <li><i class="fas fa-check-circle"></i> إيبوبروفين شراب (بروفين أطفال)</li>
+                        <li><i class="fas fa-check-circle"></i> أموكسيسيلين شراب (أوجمنتين أطفال)</li>
+                        <li><i class="fas fa-check-circle"></i> سالبوتامول شراب (فنتولين أطفال)</li>
+                        <li><i class="fas fa-check-circle"></i> محلول أملاح (ORS) للجفاف</li>
+                        <li><i class="fas fa-check-circle"></i> فيتامين D نقط (فيدروب)</li>
+                        <li><i class="fas fa-check-circle"></i> سيميثيكون نقط (دنتينوكس) للمغص</li>
+                        <li><i class="fas fa-check-circle"></i> دومبيريدون شراب (موتيليوم أطفال)</li>
+                    </ul>
+                    <div class="type-badge">أطفال</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Uses - EXPANDED -->
+    <section id="uses" class="section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-stethoscope"></i> الاستخدامات</span>
+                <h2 class="section-title">استخدامات <span class="gradient-text">الأدوية</span></h2>
+                <p class="section-desc">تعرف على الاستخدامات الصحيحة لأشهر الأدوية في الصيدليات</p>
+            </div>
+            <div class="uses-timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"><i class="fas fa-thermometer-half"></i></div>
+                    <div class="timeline-content glass-card">
+                        <h3>الحمى والألم</h3>
+                        <div class="medicine-tag">الباراسيتامول - بنادول - أدول - تايلينول</div>
+                        <ul>
+                            <li>خفض درجة الحرارة المرتفعة</li>
+                            <li>تسكين الصداع والآلام الخفيفة والمتوسطة</li>
+                            <li>آلام الأسنان والعضلات وآلام الدورة</li>
+                            <li>الجرعة: 500-1000 مجم كل 4-6 ساعات (أقصى 4 جرام يومياً)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"><i class="fas fa-bacteria"></i></div>
+                    <div class="timeline-content glass-card">
+                        <h3>العدوى البكتيرية</h3>
+                        <div class="medicine-tag">أموكسيسيلين - أوجمنتين - هايموكس - ميجاموكس</div>
+                        <ul>
+                            <li>التهابات الحلق واللوزتين والجيوب الأنفية</li>
+                            <li>التهابات الأذن الوسطى والأسنان</li>
+                            <li>التهابات المسالك البولية والجهاز التنفسي</li>
+                            <li>يجب إكمال كورس العلاج كاملاً (5-10 أيام)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"><i class="fas fa-wind"></i></div>
+                    <div class="timeline-content glass-card">
+                        <h3>الحساسية والرشح</h3>
+                        <div class="medicine-tag">كلاريتين - زيرتك - تلفاست - إيريوس - زيزال</div>
+                        <ul>
+                            <li>حساسية الأنف الموسمية والمزمنة</li>
+                            <li>العطاس وسيلان الأنف وحكة العيون</li>
+                            <li>الشرى (الأرتيكاريا) والحكة الجلدية</li>
+                            <li>الأجيال الجديدة (تلفاست، إيريوس) لا تسبب النعاس</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"><i class="fas fa-fire"></i></div>
+                    <div class="timeline-content glass-card">
+                        <h3>حموضة المعدة والارتجاع</h3>
+                        <div class="medicine-tag">لوسك - نيكسيوم - كونترولوك - لانزور - زانتاك</div>
+                        <ul>
+                            <li>ارتجاع المريء والحموضة المزمنة</li>
+                            <li>قرحة المعدة والاثني عشر</li>
+                            <li>حماية المعدة مع أدوية الروماتيزم</li>
+                            <li>يؤخذ قبل الأكل بنصف ساعة صباحاً</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"><i class="fas fa-bone"></i></div>
+                    <div class="timeline-content glass-card">
+                        <h3>الالتهابات والتورم والروماتيزم</h3>
+                        <div class="medicine-tag">بروفين - فولتارين - كتافلام - موبيك - سيليبركس</div>
+                        <ul>
+                            <li>آلام المفاصل والروماتيزم والتهاب المفاصل</li>
+                            <li>الالتهابات وتورم الأنسجة والإصابات الرياضية</li>
+                            <li>آلام الظهر والرقبة وعرق النسا</li>
+                            <li>يؤخذ بعد الأكل مع كوب ماء كامل لحماية المعدة</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"><i class="fas fa-droplet"></i></div>
+                    <div class="timeline-content glass-card">
+                        <h3>السكري (النوع الثاني)</h3>
+                        <div class="medicine-tag">جلوكوفاج - أماريل - جانوفيا - جارديانس - فوركسيجا</div>
+                        <ul>
+                            <li>تنظيم مستوى السكر في الدم وتقليل المقاومة</li>
+                            <li>تحسين حساسية الأنسولين وتقليل الوزن</li>
+                            <li>حماية الكلى والقلب (الأدوية الحديثة)</li>
+                            <li>يحتاج متابعة دورية مع الطبيب وتحاليل منتظمة</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"><i class="fas fa-heart-pulse"></i></div>
+                    <div class="timeline-content glass-card">
+                        <h3>ارتفاع ضغط الدم</h3>
+                        <div class="medicine-tag">نورفاسك - كونكور - كوزار - ديوفان - رينيتك</div>
+                        <ul>
+                            <li>خفض ضغط الدم المرتفع والحفاظ على مستواه</li>
+                            <li>حماية القلب والكلى والأوعية الدموية</li>
+                            <li>منع السكتات الدماغية والنوبات القلبية</li>
+                            <li>يؤخذ يومياً بانتظام ولا يُوقف فجأة</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"><i class="fas fa-vial"></i></div>
+                    <div class="timeline-content glass-card">
+                        <h3>ارتفاع الكولسترول</h3>
+                        <div class="medicine-tag">ليبيتور - كريستور - زوكور - ليبانتيل</div>
+                        <ul>
+                            <li>خفض مستوى الكولسترول الضار (LDL)</li>
+                            <li>رفع مستوى الكولسترول الجيد (HDL)</li>
+                            <li>الوقاية من تصلب الشرايين وأمراض القلب</li>
+                            <li>يؤخذ مساءً عادةً مع نظام غذائي صحي</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"><i class="fas fa-brain"></i></div>
+                    <div class="timeline-content glass-card">
+                        <h3>الاكتئاب والقلق</h3>
+                        <div class="medicine-tag">بروزاك - زولوفت - سيبرالكس - باكسيل - لوسترال</div>
+                        <ul>
+                            <li>علاج الاكتئاب بأنواعه والقلق المزمن</li>
+                            <li>اضطراب الهلع والرهاب الاجتماعي</li>
+                            <li>الوسواس القهري واضطراب ما بعد الصدمة</li>
+                            <li>يحتاج 2-4 أسابيع ليظهر مفعوله الكامل</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"><i class="fas fa-lungs"></i></div>
+                    <div class="timeline-content glass-card">
+                        <h3>الربو وضيق التنفس</h3>
+                        <div class="medicine-tag">فنتولين - بلميكورت - سيريتايد - سينجولير - سبيريفا</div>
+                        <ul>
+                            <li>توسيع الشعب الهوائية وتخفيف ضيق التنفس</li>
+                            <li>السيطرة على نوبات الربو ومنع تكرارها</li>
+                            <li>علاج الانسداد الرئوي المزمن (COPD)</li>
+                            <li>البخاخ الأزرق (فنتولين) للطوارئ والبرتقالي للوقاية</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"><i class="fas fa-shield-halved"></i></div>
+                    <div class="timeline-content glass-card">
+                        <h3>الغدة الدرقية</h3>
+                        <div class="medicine-tag">إلتروكسين - يوثيروكس - نيوميركازول</div>
+                        <ul>
+                            <li>علاج قصور الغدة الدرقية (كسل الغدة)</li>
+                            <li>علاج فرط نشاط الغدة الدرقية</li>
+                            <li>تنظيم مستوى هرمونات الغدة الدرقية</li>
+                            <li>يؤخذ صباحاً على معدة فارغة قبل الفطور بساعة</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"><i class="fas fa-hand-dots"></i></div>
+                    <div class="timeline-content glass-card">
+                        <h3>الأمراض الجلدية</h3>
+                        <div class="medicine-tag">فيوسيدين - بيتاديرم - ديفرين - إيلوكون - لاميزيل</div>
+                        <ul>
+                            <li>علاج حب الشباب والبثور الالتهابية</li>
+                            <li>الأكزيما والصدفية والتهابات الجلد</li>
+                            <li>الفطريات الجلدية والتينيا</li>
+                            <li>توضع طبقة رقيقة على المنطقة المصابة فقط</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Benefits -->
+    <section id="benefits" class="section section-alt">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-thumbs-up"></i> الفوائد</span>
+                <h2 class="section-title">إيجابيات <span class="gradient-text">الأدوية</span></h2>
+                <p class="section-desc">فوائد الأدوية عند استخدامها بالشكل الصحيح وتحت إشراف طبي</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-number">01</div>
+                    <div class="benefit-icon"><i class="fas fa-heart"></i></div>
+                    <h3>إنقاذ الحياة</h3>
+                    <p>الأدوية تنقذ ملايين الأرواح سنوياً من خلال علاج الأمراض الخطيرة مثل أمراض القلب والسكري والسرطان والالتهابات الحادة</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-number">02</div>
+                    <div class="benefit-icon"><i class="fas fa-shield-heart"></i></div>
+                    <h3>الوقاية من الأمراض</h3>
+                    <p>اللقاحات والأدوية الوقائية مثل أسبوسيد للقلب وأدوية الكولسترول تحمي من الأمراض قبل حدوثها</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-number">03</div>
+                    <div class="benefit-icon"><i class="fas fa-face-smile"></i></div>
+                    <h3>تحسين جودة الحياة</h3>
+                    <p>أدوية الأمراض المزمنة كالسكري والضغط تساعد المرضى على عيش حياة طبيعية ونشطة لعقود</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-number">04</div>
+                    <div class="benefit-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>تخفيف الألم السريع</h3>
+                    <p>المسكنات مثل بنادول وبروفين وفولتارين توفر راحة سريعة وفعالة من الآلام المختلفة خلال دقائق</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-number">05</div>
+                    <div class="benefit-icon"><i class="fas fa-bacteria"></i></div>
+                    <h3>مكافحة العدوى</h3>
+                    <p>المضادات الحيوية مثل أوجمنتين وزيثروماكس تقضي على البكتيريا المسببة للأمراض وتمنع المضاعفات</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-number">06</div>
+                    <div class="benefit-icon"><i class="fas fa-brain"></i></div>
+                    <h3>تحسين الصحة النفسية</h3>
+                    <p>أدوية الاكتئاب مثل بروزاك وسيبرالكس تساعد الملايين على استعادة التوازن النفسي والعودة للحياة الطبيعية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Risks -->
+    <section id="risks" class="section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag warning-tag"><i class="fas fa-triangle-exclamation"></i> تحذيرات</span>
+                <h2 class="section-title">سلبيات <span class="gradient-text-warning">الأدوية</span></h2>
+                <p class="section-desc">مخاطر الاستخدام الخاطئ للأدوية وأضرارها المحتملة</p>
+            </div>
+            <div class="risks-container">
+                <div class="risk-item animate-on-scroll">
+                    <div class="risk-severity high">خطر مرتفع</div>
+                    <div class="risk-content">
+                        <h3><i class="fas fa-skull-crossbones"></i> الإدمان والاعتماد</h3>
+                        <p>أدوية مثل زاناكس وفاليوم وليريكا والمسكنات الأفيونية قد تسبب إدمان جسدي ونفسي عند استخدامها لفترات طويلة بدون إشراف طبي</p>
+                    </div>
+                </div>
+                <div class="risk-item animate-on-scroll">
+                    <div class="risk-severity high">خطر مرتفع</div>
+                    <div class="risk-content">
+                        <h3><i class="fas fa-exchange-alt"></i> التفاعلات الدوائية</h3>
+                        <p>مثلاً: تناول الأسبرين مع بروفين يزيد خطر النزيف، وأوجمنتين مع ميثوتريكسيت يزيد السمية. دائماً أخبر طبيبك بكل الأدوية التي تتناولها</p>
+                    </div>
+                </div>
+                <div class="risk-item animate-on-scroll">
+                    <div class="risk-severity high">خطر مرتفع</div>
+                    <div class="risk-content">
+                        <h3><i class="fas fa-pills"></i> الجرعة الزائدة</h3>
+                        <p>تناول جرعة زائدة من بنادول (أكثر من 4 جرام يومياً) قد يسبب فشل كبدي قاتل. وجرعة زائدة من أدوية القلب قد تسبب توقف القلب</p>
+                    </div>
+                </div>
+                <div class="risk-item animate-on-scroll">
+                    <div class="risk-severity medium">خطر متوسط</div>
+                    <div class="risk-content">
+                        <h3><i class="fas fa-bacteria"></i> مقاومة المضادات الحيوية</h3>
+                        <p>الاستخدام العشوائي للمضادات الحيوية مثل أوجمنتين وسيبروفلوكساسين يؤدي لظهور بكتيريا خارقة مقاومة يصعب علاجها</p>
+                    </div>
+                </div>
+                <div class="risk-item animate-on-scroll">
+                    <div class="risk-severity medium">خطر متوسط</div>
+                    <div class="risk-content">
+                        <h3><i class="fas fa-liver"></i> تضرر الأعضاء</h3>
+                        <p>الإفراط في بروفين وفولتارين يضر المعدة والكلى، والباراسيتامول بجرعات عالية يضر الكبد، والليثيوم يضر الكلى والدرقية</p>
+                    </div>
+                </div>
+                <div class="risk-item animate-on-scroll">
+                    <div class="risk-severity medium">خطر متوسط</div>
+                    <div class="risk-content">
+                        <h3><i class="fas fa-baby"></i> أضرار على الحمل</h3>
+                        <p>كثير من الأدوية محظورة أثناء الحمل مثل الأسبرين والوارفارين ومعظم المضادات الحيوية. يجب استشارة الطبيب قبل تناول أي دواء</p>
+                    </div>
+                </div>
+                <div class="risk-item animate-on-scroll">
+                    <div class="risk-severity low">خطر منخفض</div>
+                    <div class="risk-content">
+                        <h3><i class="fas fa-allergies"></i> ردود الفعل التحسسية</h3>
+                        <p>حساسية البنسلين شائعة وقد تسبب طفح جلدي أو صدمة تحسسية. أيضاً بعض الأشخاص لديهم حساسية من الأسبرين والسلفا</p>
+                    </div>
+                </div>
+                <div class="risk-item animate-on-scroll">
+                    <div class="risk-severity low">خطر منخفض</div>
+                    <div class="risk-content">
+                        <h3><i class="fas fa-moon"></i> اضطرابات النوم والتركيز</h3>
+                        <p>مضادات الحساسية القديمة (بينادريل) تسبب نعاساً شديداً، بينما بعض أدوية الاكتئاب والكورتيزون قد تسبب أرقاً</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Side Effects - EXPANDED -->
+    <section id="side-effects" class="section section-alt">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-exclamation-circle"></i> الآثار الجانبية</span>
+                <h2 class="section-title">الآثار الجانبية <span class="gradient-text">الشائعة</span></h2>
+                <p class="section-desc">الآثار الجانبية المحتملة لأشهر الأدوية المتوفرة في الصيدليات</p>
+            </div>
+            <div class="effects-accordion">
+                <div class="accordion-item animate-on-scroll">
+                    <button class="accordion-header">
+                        <div class="accordion-title"><i class="fas fa-tablets"></i><span>الباراسيتامول (بنادول، أدول، تايلينول)</span></div>
+                        <i class="fas fa-chevron-down accordion-arrow"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="effect-grid">
+                            <div class="effect-common">
+                                <h4><i class="fas fa-circle-info"></i> آثار شائعة</h4>
+                                <ul><li>غثيان خفيف</li><li>ألم في المعدة</li><li>فقدان الشهية</li></ul>
+                            </div>
+                            <div class="effect-rare">
+                                <h4><i class="fas fa-triangle-exclamation"></i> آثار نادرة/خطيرة</h4>
+                                <ul><li>تلف الكبد (جرعة زائدة > 4 جرام)</li><li>طفح جلدي تحسسي</li><li>انخفاض الصفائح الدموية</li></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate-on-scroll">
+                    <button class="accordion-header">
+                        <div class="accordion-title"><i class="fas fa-capsules"></i><span>الإيبوبروفين (بروفين، أدفيل، نيوروفين)</span></div>
+                        <i class="fas fa-chevron-down accordion-arrow"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="effect-grid">
+                            <div class="effect-common">
+                                <h4><i class="fas fa-circle-info"></i> آثار شائعة</h4>
+                                <ul><li>حرقة وألم المعدة</li><li>غثيان وقيء</li><li>صداع ودوخة</li><li>احتباس السوائل</li></ul>
+                            </div>
+                            <div class="effect-rare">
+                                <h4><i class="fas fa-triangle-exclamation"></i> آثار نادرة/خطيرة</h4>
+                                <ul><li>قرحة المعدة ونزيف معوي</li><li>مشاكل في الكلى</li><li>ارتفاع ضغط الدم</li><li>أحداث قلبية (استخدام طويل)</li></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate-on-scroll">
+                    <button class="accordion-header">
+                        <div class="accordion-title"><i class="fas fa-prescription-bottle"></i><span>أموكسيسيلين (أوجمنتين، هايموكس)</span></div>
+                        <i class="fas fa-chevron-down accordion-arrow"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="effect-grid">
+                            <div class="effect-common">
+                                <h4><i class="fas fa-circle-info"></i> آثار شائعة</h4>
+                                <ul><li>إسهال وغثيان</li><li>طفح جلدي</li><li>ألم في البطن</li><li>فطريات الفم والمهبل</li></ul>
+                            </div>
+                            <div class="effect-rare">
+                                <h4><i class="fas fa-triangle-exclamation"></i> آثار نادرة/خطيرة</h4>
+                                <ul><li>صدمة تحسسية (حساسية بنسلين)</li><li>التهاب القولون الغشائي الكاذب</li><li>اضطراب وظائف الكبد</li><li>نقص الصفائح الدموية</li></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate-on-scroll">
+                    <button class="accordion-header">
+                        <div class="accordion-title"><i class="fas fa-pills"></i><span>أوميبرازول (لوسك، بريلوسيك) ونيكسيوم وكونترولوك</span></div>
+                        <i class="fas fa-chevron-down accordion-arrow"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="effect-grid">
+                            <div class="effect-common">
+                                <h4><i class="fas fa-circle-info"></i> آثار شائعة</h4>
+                                <ul><li>صداع</li><li>ألم في البطن وانتفاخ</li><li>إمساك أو إسهال</li><li>غثيان</li></ul>
+                            </div>
+                            <div class="effect-rare">
+                                <h4><i class="fas fa-triangle-exclamation"></i> آثار نادرة/خطيرة</h4>
+                                <ul><li>نقص المغنيسيوم وفيتامين B12</li><li>هشاشة العظام (استخدام طويل > سنة)</li><li>التهابات معوية بكتيرية</li><li>أورام معدية حميدة (نادر جداً)</li></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate-on-scroll">
+                    <button class="accordion-header">
+                        <div class="accordion-title"><i class="fas fa-syringe"></i><span>ميتفورمين (جلوكوفاج، سيدوفاج)</span></div>
+                        <i class="fas fa-chevron-down accordion-arrow"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="effect-grid">
+                            <div class="effect-common">
+                                <h4><i class="fas fa-circle-info"></i> آثار شائعة</h4>
+                                <ul><li>غثيان وقيء وإسهال</li><li>طعم معدني في الفم</li><li>فقدان الشهية</li><li>انتفاخ وغازات</li></ul>
+                            </div>
+                            <div class="effect-rare">
+                                <h4><i class="fas fa-triangle-exclamation"></i> آثار نادرة/خطيرة</h4>
+                                <ul><li>حماض لبني (نادر لكن خطير)</li><li>نقص فيتامين B12 (استخدام طويل)</li><li>اضطرابات الكبد</li><li>انخفاض حاد في السكر (مع أدوية أخرى)</li></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate-on-scroll">
+                    <button class="accordion-header">
+                        <div class="accordion-title"><i class="fas fa-heart-pulse"></i><span>أملوديبين (نورفاسك) وأدوية الضغط</span></div>
+                        <i class="fas fa-chevron-down accordion-arrow"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="effect-grid">
+                            <div class="effect-common">
+                                <h4><i class="fas fa-circle-info"></i> آثار شائعة</h4>
+                                <ul><li>تورم القدمين والكاحل</li><li>دوخة وصداع</li><li>احمرار الوجه</li><li>خفقان القلب</li></ul>
+                            </div>
+                            <div class="effect-rare">
+                                <h4><i class="fas fa-triangle-exclamation"></i> آثار نادرة/خطيرة</h4>
+                                <ul><li>انخفاض حاد في الضغط</li><li>اضطراب نظم القلب</li><li>تضخم اللثة</li><li>اضطرابات الكبد</li></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate-on-scroll">
+                    <button class="accordion-header">
+                        <div class="accordion-title"><i class="fas fa-vial"></i><span>أتورفاستاتين (ليبيتور) وأدوية الكولسترول</span></div>
+                        <i class="fas fa-chevron-down accordion-arrow"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="effect-grid">
+                            <div class="effect-common">
+                                <h4><i class="fas fa-circle-info"></i> آثار شائعة</h4>
+                                <ul><li>آلام العضلات والمفاصل</li><li>صداع وغثيان</li><li>إمساك أو إسهال</li><li>ارتفاع إنزيمات الكبد</li></ul>
+                            </div>
+                            <div class="effect-rare">
+                                <h4><i class="fas fa-triangle-exclamation"></i> آثار نادرة/خطيرة</h4>
+                                <ul><li>انحلال العضلات (rhabdomyolysis)</li><li>تلف الكبد</li><li>اعتلال الأعصاب الطرفية</li><li>ارتفاع السكر في الدم</li></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate-on-scroll">
+                    <button class="accordion-header">
+                        <div class="accordion-title"><i class="fas fa-brain"></i><span>سيرترالين (زولوفت) ومضادات الاكتئاب SSRI</span></div>
+                        <i class="fas fa-chevron-down accordion-arrow"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="effect-grid">
+                            <div class="effect-common">
+                                <h4><i class="fas fa-circle-info"></i> آثار شائعة</h4>
+                                <ul><li>غثيان وإسهال (الأسابيع الأولى)</li><li>صداع ودوخة</li><li>أرق أو نعاس</li><li>جفاف الفم وزيادة التعرق</li></ul>
+                            </div>
+                            <div class="effect-rare">
+                                <h4><i class="fas fa-triangle-exclamation"></i> آثار نادرة/خطيرة</h4>
+                                <ul><li>أفكار انتحارية (خاصة بداية العلاج عند الشباب)</li><li>متلازمة السيروتونين</li><li>نزيف غير طبيعي</li><li>أعراض انسحابية عند التوقف المفاجئ</li></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate-on-scroll">
+                    <button class="accordion-header">
+                        <div class="accordion-title"><i class="fas fa-shield-halved"></i><span>ليفوثيروكسين (إلتروكسين) للغدة الدرقية</span></div>
+                        <i class="fas fa-chevron-down accordion-arrow"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="effect-grid">
+                            <div class="effect-common">
+                                <h4><i class="fas fa-circle-info"></i> آثار شائعة</h4>
+                                <ul><li>خفقان القلب (جرعة عالية)</li><li>تعرق زائد وحساسية للحرارة</li><li>رعشة وعصبية</li><li>فقدان الوزن</li></ul>
+                            </div>
+                            <div class="effect-rare">
+                                <h4><i class="fas fa-triangle-exclamation"></i> آثار نادرة/خطيرة</h4>
+                                <ul><li>اضطراب نظم القلب</li><li>ذبحة صدرية</li><li>هشاشة العظام (جرعات عالية طويلة)</li><li>أزمة درقية (نادرة)</li></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate-on-scroll">
+                    <button class="accordion-header">
+                        <div class="accordion-title"><i class="fas fa-lungs"></i><span>سالبوتامول (فنتولين) بخاخ الربو</span></div>
+                        <i class="fas fa-chevron-down accordion-arrow"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="effect-grid">
+                            <div class="effect-common">
+                                <h4><i class="fas fa-circle-info"></i> آثار شائعة</h4>
+                                <ul><li>رعشة في اليدين</li><li>خفقان وتسارع القلب</li><li>صداع وعصبية</li><li>تقلصات عضلية</li></ul>
+                            </div>
+                            <div class="effect-rare">
+                                <h4><i class="fas fa-triangle-exclamation"></i> آثار نادرة/خطيرة</h4>
+                                <ul><li>اضطراب نظم القلب</li><li>انخفاض البوتاسيوم</li><li>تشنج قصبي متناقض (نادر)</li><li>حساسية مفرطة</li></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Guidelines -->
+    <section id="guidelines" class="section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-clipboard-check"></i> إرشادات</span>
+                <h2 class="section-title">إرشادات <span class="gradient-text">الاستخدام الآمن</span></h2>
+                <p class="section-desc">قواعد ذهبية لاستخدام الأدوية بشكل صحيح وآمن</p>
+            </div>
+            <div class="guidelines-grid">
+                <div class="guideline-card animate-on-scroll">
+                    <div class="guideline-step">1</div>
+                    <div class="guideline-icon"><i class="fas fa-user-doctor"></i></div>
+                    <h3>استشر الطبيب</h3>
+                    <p>لا تتناول أي دواء جديد بدون استشارة الطبيب أو الصيدلي، خاصة إذا كنت تعاني من أمراض مزمنة</p>
+                </div>
+                <div class="guideline-card animate-on-scroll">
+                    <div class="guideline-step">2</div>
+                    <div class="guideline-icon"><i class="fas fa-file-prescription"></i></div>
+                    <h3>اقرأ النشرة</h3>
+                    <p>اقرأ النشرة الداخلية للدواء بعناية قبل الاستخدام لمعرفة الجرعة الصحيحة والتحذيرات المهمة</p>
+                </div>
+                <div class="guideline-card animate-on-scroll">
+                    <div class="guideline-step">3</div>
+                    <div class="guideline-icon"><i class="fas fa-clock"></i></div>
+                    <h3>التزم بالمواعيد</h3>
+                    <p>تناول الدواء في المواعيد المحددة وبالجرعة الموصوفة، ولا تضاعف الجرعة إذا نسيت واحدة</p>
+                </div>
+                <div class="guideline-card animate-on-scroll">
+                    <div class="guideline-step">4</div>
+                    <div class="guideline-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h3>أكمل الكورس</h3>
+                    <p>لا تتوقف عن تناول المضادات الحيوية عند تحسن الأعراض، بل أكمل الكورس العلاجي كاملاً لمنع المقاومة</p>
+                </div>
+                <div class="guideline-card animate-on-scroll">
+                    <div class="guideline-step">5</div>
+                    <div class="guideline-icon"><i class="fas fa-temperature-low"></i></div>
+                    <h3>التخزين الصحيح</h3>
+                    <p>خزّن الأدوية في مكان بارد وجاف بعيداً عن أشعة الشمس والرطوبة وبعيداً عن متناول الأطفال</p>
+                </div>
+                <div class="guideline-card animate-on-scroll">
+                    <div class="guideline-step">6</div>
+                    <div class="guideline-icon"><i class="fas fa-calendar-xmark"></i></div>
+                    <h3>تحقق من الصلاحية</h3>
+                    <p>تحقق دائماً من تاريخ الصلاحية قبل الاستخدام، وتخلص من الأدوية منتهية الصلاحية بشكل آمن</p>
+                </div>
+                <div class="guideline-card animate-on-scroll">
+                    <div class="guideline-step">7</div>
+                    <div class="guideline-icon"><i class="fas fa-wine-glass-empty"></i></div>
+                    <h3>تجنب التداخلات</h3>
+                    <p>أخبر طبيبك بجميع الأدوية والمكملات والأعشاب التي تتناولها لتجنب التفاعلات الدوائية الخطيرة</p>
+                </div>
+                <div class="guideline-card animate-on-scroll">
+                    <div class="guideline-step">8</div>
+                    <div class="guideline-icon"><i class="fas fa-baby"></i></div>
+                    <h3>حالات خاصة</h3>
+                    <p>الحوامل والمرضعات والأطفال وكبار السن ومرضى الكلى والكبد يحتاجون عناية خاصة في اختيار الأدوية</p>
+                </div>
+            </div>
+            <div class="emergency-box animate-on-scroll">
+                <div class="emergency-icon"><i class="fas fa-phone-volume"></i></div>
+                <div class="emergency-content">
+                    <h4>في حالة الطوارئ</h4>
+                    <p>إذا تناولت جرعة زائدة أو ظهرت أعراض تحسسية شديدة (تورم الوجه، صعوبة التنفس، طفح منتشر)، توجه فوراً لأقرب مستشفى أو اتصل بالطوارئ 911 / 997</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Compare - EXPANDED -->
+    <section id="compare" class="section section-alt">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-scale-balanced"></i> مقارنة</span>
+                <h2 class="section-title">مقارنة بين <span class="gradient-text">الأدوية</span></h2>
+                <p class="section-desc">مقارنة تفصيلية بين الأدوية الأكثر استخداماً في كل فئة</p>
+            </div>
+
+            <!-- مسكنات الألم -->
+            <div class="compare-section animate-on-scroll">
+                <h3 class="compare-category"><i class="fas fa-head-side-virus"></i> مسكنات الألم</h3>
+                <div class="compare-table-wrapper">
+                    <table class="compare-table">
+                        <thead><tr><th>الدواء</th><th>الفعالية</th><th>السرعة</th><th>أمان المعدة</th><th>مضاد التهاب</th><th>السعر</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>باراسيتامول (بنادول)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star"></span><span class="star"></span></div></td><td>30 دقيقة</td><td><span class="badge badge-green">آمن جداً</span></td><td><span class="badge badge-red">لا</span></td><td><span class="badge badge-green">منخفض</span></td></tr>
+                            <tr><td><strong>إيبوبروفين (بروفين)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star"></span></div></td><td>20 دقيقة</td><td><span class="badge badge-yellow">متوسط</span></td><td><span class="badge badge-green">نعم</span></td><td><span class="badge badge-green">منخفض</span></td></tr>
+                            <tr><td><strong>ديكلوفيناك (فولتارين)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span></div></td><td>15 دقيقة</td><td><span class="badge badge-red">منخفض</span></td><td><span class="badge badge-green">نعم (قوي)</span></td><td><span class="badge badge-yellow">متوسط</span></td></tr>
+                            <tr><td><strong>نابروكسين (نابروسين)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star"></span></div></td><td>30 دقيقة</td><td><span class="badge badge-yellow">متوسط</span></td><td><span class="badge badge-green">نعم</span></td><td><span class="badge badge-green">منخفض</span></td></tr>
+                            <tr><td><strong>سيليكوكسيب (سيليبركس)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star"></span></div></td><td>30 دقيقة</td><td><span class="badge badge-green">آمن</span></td><td><span class="badge badge-green">نعم</span></td><td><span class="badge badge-red">مرتفع</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- مضادات الحساسية -->
+            <div class="compare-section animate-on-scroll">
+                <h3 class="compare-category"><i class="fas fa-allergies"></i> مضادات الحساسية</h3>
+                <div class="compare-table-wrapper">
+                    <table class="compare-table">
+                        <thead><tr><th>الدواء</th><th>الفعالية</th><th>النعاس</th><th>المدة</th><th>للأطفال</th><th>السعر</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>لوراتادين (كلاريتين)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star"></span></div></td><td><span class="badge badge-green">لا يسبب</span></td><td>24 ساعة</td><td><span class="badge badge-green">+2 سنة</span></td><td><span class="badge badge-green">منخفض</span></td></tr>
+                            <tr><td><strong>سيتيريزين (زيرتك)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span></div></td><td><span class="badge badge-yellow">قليل</span></td><td>24 ساعة</td><td><span class="badge badge-green">+6 أشهر</span></td><td><span class="badge badge-green">منخفض</span></td></tr>
+                            <tr><td><strong>فيكسوفينادين (تلفاست)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star"></span></div></td><td><span class="badge badge-green">لا يسبب</span></td><td>24 ساعة</td><td><span class="badge badge-yellow">+6 سنوات</span></td><td><span class="badge badge-yellow">متوسط</span></td></tr>
+                            <tr><td><strong>ديسلوراتادين (إيريوس)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span></div></td><td><span class="badge badge-green">لا يسبب</span></td><td>24 ساعة</td><td><span class="badge badge-green">+1 سنة</span></td><td><span class="badge badge-yellow">متوسط</span></td></tr>
+                            <tr><td><strong>ليفوسيتيريزين (زيزال)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span></div></td><td><span class="badge badge-yellow">قليل جداً</span></td><td>24 ساعة</td><td><span class="badge badge-green">+2 سنة</span></td><td><span class="badge badge-yellow">متوسط</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- أدوية المعدة -->
+            <div class="compare-section animate-on-scroll">
+                <h3 class="compare-category"><i class="fas fa-fire"></i> أدوية المعدة والحموضة</h3>
+                <div class="compare-table-wrapper">
+                    <table class="compare-table">
+                        <thead><tr><th>الدواء</th><th>الفعالية</th><th>السرعة</th><th>المدة</th><th>الأمان</th><th>السعر</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>أوميبرازول (لوسك)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span></div></td><td>1-2 ساعة</td><td>24 ساعة</td><td><span class="badge badge-yellow">جيد</span></td><td><span class="badge badge-green">منخفض</span></td></tr>
+                            <tr><td><strong>إيزوميبرازول (نيكسيوم)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span></div></td><td>1 ساعة</td><td>24 ساعة</td><td><span class="badge badge-yellow">جيد</span></td><td><span class="badge badge-yellow">متوسط</span></td></tr>
+                            <tr><td><strong>بانتوبرازول (كونترولوك)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star"></span></div></td><td>1-2 ساعة</td><td>24 ساعة</td><td><span class="badge badge-green">ممتاز</span></td><td><span class="badge badge-yellow">متوسط</span></td></tr>
+                            <tr><td><strong>رانيتيدين (زانتاك)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star"></span><span class="star"></span></div></td><td>30 دقيقة</td><td>12 ساعة</td><td><span class="badge badge-green">ممتاز</span></td><td><span class="badge badge-green">منخفض</span></td></tr>
+                            <tr><td><strong>مالوكس / جافيسكون</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star"></span><span class="star"></span><span class="star"></span></div></td><td>5 دقائق</td><td>2-3 ساعات</td><td><span class="badge badge-green">آمن جداً</span></td><td><span class="badge badge-green">منخفض</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- المضادات الحيوية -->
+            <div class="compare-section animate-on-scroll">
+                <h3 class="compare-category"><i class="fas fa-virus-slash"></i> المضادات الحيوية الشائعة</h3>
+                <div class="compare-table-wrapper">
+                    <table class="compare-table">
+                        <thead><tr><th>الدواء</th><th>الطيف</th><th>مدة الكورس</th><th>أمان الحمل</th><th>مع الطعام</th><th>السعر</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>أموكسيسيلين (أوجمنتين)</strong></td><td><span class="badge badge-green">واسع</span></td><td>7-10 أيام</td><td><span class="badge badge-green">آمن (B)</span></td><td>مع أو بدون</td><td><span class="badge badge-green">منخفض</span></td></tr>
+                            <tr><td><strong>أزيثرومايسين (زيثروماكس)</strong></td><td><span class="badge badge-yellow">متوسط</span></td><td>3-5 أيام</td><td><span class="badge badge-yellow">حذر (B)</span></td><td>قبل الأكل بساعة</td><td><span class="badge badge-yellow">متوسط</span></td></tr>
+                            <tr><td><strong>سيبروفلوكساسين (سيبرو)</strong></td><td><span class="badge badge-green">واسع جداً</span></td><td>7-14 يوم</td><td><span class="badge badge-red">ممنوع (C)</span></td><td>قبل الأكل</td><td><span class="badge badge-green">منخفض</span></td></tr>
+                            <tr><td><strong>كلاريثرومايسين (كلاسيد)</strong></td><td><span class="badge badge-yellow">متوسط</span></td><td>7-14 يوم</td><td><span class="badge badge-red">ممنوع (C)</span></td><td>مع الأكل</td><td><span class="badge badge-yellow">متوسط</span></td></tr>
+                            <tr><td><strong>سيفيكسيم (سوبراكس)</strong></td><td><span class="badge badge-green">واسع</span></td><td>5-10 أيام</td><td><span class="badge badge-green">آمن (B)</span></td><td>مع أو بدون</td><td><span class="badge badge-yellow">متوسط</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- أدوية السكري -->
+            <div class="compare-section animate-on-scroll">
+                <h3 class="compare-category"><i class="fas fa-droplet"></i> أدوية السكري (النوع الثاني)</h3>
+                <div class="compare-table-wrapper">
+                    <table class="compare-table">
+                        <thead><tr><th>الدواء</th><th>الفعالية</th><th>تأثير الوزن</th><th>خطر هبوط السكر</th><th>حماية القلب</th><th>السعر</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>ميتفورمين (جلوكوفاج)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star"></span></div></td><td><span class="badge badge-green">يُنقص</span></td><td><span class="badge badge-green">منخفض</span></td><td><span class="badge badge-yellow">محايد</span></td><td><span class="badge badge-green">منخفض</span></td></tr>
+                            <tr><td><strong>جليمبرايد (أماريل)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star"></span></div></td><td><span class="badge badge-red">يزيد</span></td><td><span class="badge badge-red">مرتفع</span></td><td><span class="badge badge-yellow">محايد</span></td><td><span class="badge badge-green">منخفض</span></td></tr>
+                            <tr><td><strong>سيتاجليبتين (جانوفيا)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star"></span><span class="star"></span></div></td><td><span class="badge badge-green">محايد</span></td><td><span class="badge badge-green">منخفض</span></td><td><span class="badge badge-yellow">محايد</span></td><td><span class="badge badge-red">مرتفع</span></td></tr>
+                            <tr><td><strong>إمباجليفلوزين (جارديانس)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star"></span></div></td><td><span class="badge badge-green">يُنقص</span></td><td><span class="badge badge-green">منخفض</span></td><td><span class="badge badge-green">يحمي</span></td><td><span class="badge badge-red">مرتفع</span></td></tr>
+                            <tr><td><strong>داباجليفلوزين (فوركسيجا)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star"></span></div></td><td><span class="badge badge-green">يُنقص</span></td><td><span class="badge badge-green">منخفض</span></td><td><span class="badge badge-green">يحمي</span></td><td><span class="badge badge-red">مرتفع</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- أدوية الضغط -->
+            <div class="compare-section animate-on-scroll">
+                <h3 class="compare-category"><i class="fas fa-heart-pulse"></i> أدوية ارتفاع ضغط الدم</h3>
+                <div class="compare-table-wrapper">
+                    <table class="compare-table">
+                        <thead><tr><th>الدواء</th><th>الفعالية</th><th>حماية الكلى</th><th>حماية القلب</th><th>آثار جانبية</th><th>السعر</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>أملوديبين (نورفاسك)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span></div></td><td><span class="badge badge-yellow">محايد</span></td><td><span class="badge badge-green">جيد</span></td><td>تورم القدمين</td><td><span class="badge badge-green">منخفض</span></td></tr>
+                            <tr><td><strong>لوسارتان (كوزار)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star"></span></div></td><td><span class="badge badge-green">ممتاز</span></td><td><span class="badge badge-green">جيد</span></td><td>دوخة خفيفة</td><td><span class="badge badge-green">منخفض</span></td></tr>
+                            <tr><td><strong>بيسوبرولول (كونكور)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star"></span></div></td><td><span class="badge badge-yellow">محايد</span></td><td><span class="badge badge-green">ممتاز</span></td><td>إرهاق وبرودة أطراف</td><td><span class="badge badge-green">منخفض</span></td></tr>
+                            <tr><td><strong>إنالابريل (رينيتك)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star"></span></div></td><td><span class="badge badge-green">ممتاز</span></td><td><span class="badge badge-green">ممتاز</span></td><td>سعال جاف</td><td><span class="badge badge-green">منخفض</span></td></tr>
+                            <tr><td><strong>فالسارتان (ديوفان)</strong></td><td><div class="rating"><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span></div></td><td><span class="badge badge-green">ممتاز</span></td><td><span class="badge badge-green">ممتاز</span></td><td>دوخة خفيفة</td><td><span class="badge badge-yellow">متوسط</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-capsules"></i>
+                        <span>دليل الأدوية</span>
+                    </div>
+                    <p>مرجعك الشامل لفهم الأدوية والعلاجات المتوفرة في الصيدليات بشكل مبسط وموثوق. يحتوي على أكثر من 100 دواء مع معلومات تفصيلية</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">تعريف الأدوية</a></li>
+                        <li><a href="#types">أنواع الأدوية</a></li>
+                        <li><a href="#uses">الاستخدامات</a></li>
+                        <li><a href="#benefits">الإيجابيات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>معلومات مهمة</h4>
+                    <ul>
+                        <li><a href="#risks">السلبيات</a></li>
+                        <li><a href="#side-effects">الآثار الجانبية</a></li>
+                        <li><a href="#guidelines">إرشادات الاستخدام</a></li>
+                        <li><a href="#compare">مقارنة الأدوية</a></li>
+                    </ul>
+                </div>
+                <div class="footer-disclaimer">
+                    <h4>تنبيه مهم</h4>
+                    <p>المعلومات الواردة في هذا الموقع لأغراض تعليمية فقط ولا تغني عن استشارة الطبيب أو الصيدلي المختص. لا تبدأ أو توقف أي دواء بدون إشراف طبي.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 دليل الأدوية والعلاجات. جميع الحقوق محفوظة</p>
+                <p style="margin-top: 8px; font-size: 0.85rem; color: #94a3b8;">برمجة وتطوير: <span style="color: var(--primary); font-weight: 700;">اسماء عمر محيسن</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
